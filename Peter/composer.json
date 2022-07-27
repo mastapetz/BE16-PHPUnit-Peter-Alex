@@ -1,0 +1,22 @@
+{
+    "name": "peteraigner/phpunit",
+    "authors" : [
+         {
+            "name": "Peter Aigner",
+             "email": "peter.aigner@me.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    },
+    "autoload": {
+        "psr-4": {
+             "TDD\\": "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4": {
+            "TDD\\Test\\": "tests/"
+        }
+    }
+  }
