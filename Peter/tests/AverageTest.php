@@ -1,9 +1,9 @@
 <?php
-namespace TDD\Test;
-use PHPUnit\Framework\TestCase;
-use TDD\ArrayAverage;
+namespace TDD\Test; //needed for classes not needed functions
+use PHPUnit\Framework\TestCase;  
+use TDD\ArrayAverage;   //needed for classes not working/needed functions
 
-require_once "src/ArrayAverage.php";
+// require_once "src/ArrayAverage.php"; //needed when not using classes
 
 
 
@@ -13,9 +13,9 @@ class AverageTest extends TestCase{
     public function testCalcAvg(){
 
         $obj = new ArrayAverage;
-        $input1 = [1,2,3,4,5];
-        $output = $obj->calcAvg($input1);
-        $this->assertEquals(3, $output , "Expected Value 3");
+        // $input1 = [1,2,3,4,5];
+        // $output = $obj->calcAvg($input1);
+        $this->assertEquals(3, $obj->calcAvg([1,2,3,4,5]) , "Expected Value 3"); //object needed for classes, not needed when no classes
         $obj = new ArrayAverage;
         $input2 = [3,3,3,3,3];
         $output = $obj->calcAvg($input2);
